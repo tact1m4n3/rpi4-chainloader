@@ -1,0 +1,19 @@
+[package]
+name = "rpi4-chainloader"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    ".",
+    "loader"
+]
+
+[profile.release]
+lto = true
+
+[dependencies]
+anyhow = "1.0.70"
+clap = { version = "4.2.1", features = ["derive"] }
+ctrlc = "3.2.5"
+serialport = "4.2.0"
